@@ -1,5 +1,3 @@
-// app/+not-found.tsx (or app/not-found.tsx)
-
 import { Link } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";

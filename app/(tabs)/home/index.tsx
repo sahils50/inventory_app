@@ -1,10 +1,10 @@
 import { router } from "expo-router";
 import { Button, Text, View } from "react-native";
 
-export default function Home() {
+export default function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Home Screen</Text>
+      <Text className="text-4xl font-bold text-black">Home Screen</Text>
       <Button
         title="Open Notifications"
         onPress={() => router.push("/(tabs)/home/notifications")}
