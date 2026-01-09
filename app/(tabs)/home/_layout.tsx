@@ -1,21 +1,28 @@
+// app/(tabs)/home/_layout.tsx
+import AppHeader from "@/components/common/AppHeader";
 import { Stack } from "expo-router";
-
 export default function HomeLayout() {
   return (
-    <Stack>
+    <Stack screenOptions={{ headerShown: true }}>
+      {/* Main Home screen – no back button */}
       <Stack.Screen
         name="index"
         options={{
-          title: "Home",
-          headerShown: false, // Hide header on the main tab screen (recommended)
+          headerShown: false,
         }}
       />
 
+      {/* Notifications sub-screen – with back button */}
       <Stack.Screen
         name="notifications"
         options={{
-          title: "Notifications",
-          // headerShown: true by default → shows back button + title
+          header: () => (
+            <AppHeader
+              title="Notifications"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
         }}
       />
     </Stack>
