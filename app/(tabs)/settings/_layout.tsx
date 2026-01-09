@@ -10,6 +10,61 @@ export default function SettingLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="Aboutus"
+        options={{
+          title: "Aboutus",
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Appearance"
+        options={{
+          title: "Appearance",
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="ChangePassword"
+        options={{
+          title: "Change Password",
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        options={{
+          title: "Edit Profile",
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="HelpCenter"
+        options={{
+          title: "Help Center",
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Review"
+        options={{
+          title: "Review",
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Security"
+        options={{
+          title: "Security",
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="privacy"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }
