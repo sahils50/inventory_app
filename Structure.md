@@ -31,9 +31,20 @@ inventory_app/
 │ │ └── settings/
 | | | ├──_layout.tsx
 │ │ │ ├── index.tsx ← Setting tab main
-│ │ ├── index.tsx ← Settings tab main
-│ │ ├── profile.tsx
-│ │ └── preferences.tsx
+│ │ ├── ChangePassword.tsx
+│ │ ├── EditProfile.tsx
+│ │ ├── Security.tsx
+│ │ ├── Appearance.tsx
+│ │ ├── HelpCenter.tsx
+│ │ ├── Review.tsx
+│ │ ├── Aboutus.tsx
+│ │ ├── privacy/
+│ │ | ├── index.tsx
+│ │ | ├── \_layout.tsx
+│ │ | ├── PrivacyPolicy.tsx
+│ │ | ├── TermNConditions.tsx
+│ │ | ├── DeleteAccountData.tsx
+│ │ | ├── DataRetentionPolicy.tsx
 │ │
 │ └── +not-found.tsx
 │
