@@ -30,29 +30,45 @@ export default function SettingLayout() {
       <Stack.Screen
         name="ChangePassword"
         options={{
-          title: "Change Password",
-          headerShown: false,
+          header: () => (
+            <AppHeader
+              title="Change Password"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
         }}
       />
       <Stack.Screen
         name="EditProfile"
         options={{
-          title: "Edit Profile",
-          headerShown: false,
+          header: () => (
+            <AppHeader
+              title="Edit Profile"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
         }}
       />
       <Stack.Screen
         name="HelpCenter"
         options={{
-          title: "Help Center",
-          headerShown: false,
+          header: () => (
+            <AppHeader
+              title="Help Center"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
         }}
       />
       <Stack.Screen
         name="Review"
         options={{
-          title: "Review",
-          headerShown: false,
+          header: () => (
+            <AppHeader title="Security" showBack={true} rightContent="none" />
+          ),
         }}
       />
       <Stack.Screen
@@ -66,7 +82,21 @@ export default function SettingLayout() {
       <Stack.Screen
         name="privacy"
         options={{
-          headerShown: false,
+          header: () => (
+            <AppHeader title="Privacy" showBack={true} rightContent="none" />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="ContactSupport"
+        options={{
+          header: () => (
+            <AppHeader
+              title="Contact Support"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
         }}
       />
     </Stack>
