@@ -7,7 +7,7 @@ export default function HomeScreen() {
       <Text className="text-4xl font-bold text-black">Home Screen</Text>
       <Button
         title="Open Notifications"
-        onPress={() => router.push("/(tabs)/home/notifications")}
+        onPress={() => router.push("/(app)/(tabs)/home/notifications")}
       />
     </View>
   );
