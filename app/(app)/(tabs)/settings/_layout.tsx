@@ -7,8 +7,9 @@ export default function SettingLayout() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Settings",
-          headerShown: false,
+          header: () => (
+            <AppHeader title="Setting" showBack={true} rightContent="none" />
+          ),
         }}
       />
       <Stack.Screen
@@ -57,8 +58,9 @@ export default function SettingLayout() {
       <Stack.Screen
         name="Security"
         options={{
-          title: "Security",
-          headerShown: false,
+          header: () => (
+            <AppHeader title="Security" showBack={true} rightContent="none" />
+          ),
         }}
       />
       <Stack.Screen
