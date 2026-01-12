@@ -1,3 +1,4 @@
+import AppHeader from "@/components/common/AppHeader";
 import { Stack } from "expo-router";
 
 export default function SettingLayout() {
@@ -20,8 +21,9 @@ export default function SettingLayout() {
       <Stack.Screen
         name="Appearance"
         options={{
-          title: "Appearance",
-          headerShown: false,
+          header: () => (
+            <AppHeader title="Appearance" showBack={true} rightContent="none" />
+          ),
         }}
       />
       <Stack.Screen
