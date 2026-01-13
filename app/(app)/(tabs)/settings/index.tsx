@@ -7,7 +7,7 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 export default function Setting() {
   return (
     <View className="flex-1 bg-white">
-      <ScrollView className="flex-1 ">
+      <ScrollView className="flex-1">
         <TouchableOpacity
           activeOpacity={0.8}
           className={`
@@ -90,7 +90,6 @@ export default function Setting() {
               </Text>
             </View>
           </View>
-
           {/* Cards */}
           <View className="pb-10">
             <SettingsToggleItem

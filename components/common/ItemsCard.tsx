@@ -40,18 +40,17 @@ export default function SettingsItem({
       onPress={handlePress}
       disabled={disabled}
       activeOpacity={0.7}
-      className="active:opacity-70"
     >
-      <View className="flex-row items-center justify-between  px-5 py-4 rounded-xl my-1.5 mx-4">
+      <View className="flex-row items-center justify-between px-5 py-4 rounded-xl my-1.5 mx-4 bg-white">
         {/* Icon + Text container */}
-        <View className="flex-row items-start flex-1 gap-4">
+        <View className="flex-row items-center flex-1 gap-4">
           {/* Icon background */}
-          <View className="bg-gray-200/70 p-3 rounded-full mt-0.5">
-            <Ionicons name={icon} size={26} color="#4B5563" /> {/* gray-600 */}
+          <View className="bg-gray-200/70 p-3 rounded-full">
+            <Ionicons name={icon} size={26} color="#4B5563" />
           </View>
 
           {/* Title + Description */}
-          <View className="flex-1 pr-3">
+          <View className="flex-1">
             <Text className="text-base font-medium text-gray-800">{title}</Text>
             {description && (
               <Text className="text-sm text-gray-500 mt-0.5 leading-5">
@@ -63,7 +62,7 @@ export default function SettingsItem({
 
         {/* Right side indicator */}
         {chevron && !disabled && (
-          <Ionicons name="chevron-forward" size={20} color="#9CA3AF" /> // gray-400
+          <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
         )}
 
         {disabled && (
