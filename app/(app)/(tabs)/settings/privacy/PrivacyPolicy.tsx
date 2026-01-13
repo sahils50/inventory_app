@@ -9,3 +9,5 @@ export default function PrivacyPolicy() {
     </View>
   );
 }
+
+//huzaifa working
