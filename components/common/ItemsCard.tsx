@@ -42,7 +42,7 @@ export default function SettingsItem({
       activeOpacity={0.7}
       className="active:opacity-70"
     >
-      <View className="flex-row items-center justify-between bg-gray-100 px-5 py-4 rounded-xl my-1.5 mx-4 shadow-sm">
+      <View className="flex-row items-center justify-between  px-5 py-4 rounded-xl my-1.5 mx-4">
         {/* Icon + Text container */}
         <View className="flex-row items-start flex-1 gap-4">
           {/* Icon background */}
