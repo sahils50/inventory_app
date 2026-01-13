@@ -72,7 +72,7 @@ export default function SettingLayout() {
         name="Review"
         options={{
           header: () => (
-            <AppHeader title="Security" showBack={true} rightContent="none" />
+            <AppHeader title="Review" showBack={true} rightContent="none" />
           ),
         }}
       />
