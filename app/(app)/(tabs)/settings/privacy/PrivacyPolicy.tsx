@@ -10,4 +10,4 @@ export default function PrivacyPolicy() {
   );
 }
 
-//huzaifa working
+//huzaifa working on this page
