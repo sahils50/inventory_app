@@ -15,8 +15,13 @@ export default function SettingLayout() {
       <Stack.Screen
         name="Aboutus"
         options={{
-          title: "Aboutus",
-          headerShown: false,
+          header: () => (
+            <AppHeader
+              title="About ShopSmart"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
         }}
       />
       <Stack.Screen
