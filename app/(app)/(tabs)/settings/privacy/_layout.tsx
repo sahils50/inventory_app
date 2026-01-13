@@ -1,3 +1,4 @@
+import AppHeader from "@/components/common/AppHeader";
 import { Stack } from "expo-router";
 
 export default function SettingLayout() {
@@ -6,8 +7,9 @@ export default function SettingLayout() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Privacy",
-          headerShown: false,
+          header: () => (
+            <AppHeader title="Security" showBack={true} rightContent="none" />
+          ),
         }}
       />
       <Stack.Screen

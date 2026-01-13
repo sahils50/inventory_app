@@ -82,9 +82,8 @@ export default function SettingLayout() {
       <Stack.Screen
         name="privacy"
         options={{
-          header: () => (
-            <AppHeader title="Privacy" showBack={true} rightContent="none" />
-          ),
+          title: "Privacy",
+          headerShown: false,
         }}
       />
       <Stack.Screen
