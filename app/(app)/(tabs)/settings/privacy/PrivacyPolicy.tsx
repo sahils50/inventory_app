@@ -160,7 +160,7 @@ export default function PrivacyPolicy() {
         </View>
 
         <View className=" flex-row justify-center mb-3">
-         <Ionicons name="time-outline" size={24} className="text-gray-500  pt-[2px]" />
+         <Ionicons name="time-outline" size={24} color= 'gray'  className="pt-[2px]" />
           <Text className="text-lg font-medium text-gray-500"> Last updated: January 15, 2024</Text>
         </View>
       </ScrollView>
