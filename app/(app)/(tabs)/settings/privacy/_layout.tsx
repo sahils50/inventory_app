@@ -15,30 +15,34 @@ export default function SettingLayout() {
       <Stack.Screen
         name="DataRetentionPolicy"
         options={{
-          title: "Data Retention Policy",
-          headerShown: false,
-        }}
+                 header: () => (
+                   <AppHeader title=" Data Retention Policy " showBack={true} rightContent="none" />
+                 ),
+               }}
       />
       <Stack.Screen
         name="DeleteAccountData"
-        options={{
-          title: "Delete Account Data",
-          headerShown: false,
-        }}
+         options={{
+                 header: () => (
+                   <AppHeader title=" Delete Account Data " showBack={true} rightContent="none" />
+                 ),
+               }}
       />
       <Stack.Screen
         name="PrivacyPolicy"
-        options={{
-          title: "Privacy Policy",
-          headerShown: false,
-        }}
+       options={{
+                 header: () => (
+                   <AppHeader title="Privacy Policy" showBack={true} rightContent="none" />
+                 ),
+               }}
       />
       <Stack.Screen
         name="TermNConditions"
         options={{
-          title: "Terms and Conditions",
-          headerShown: false,
-        }}
+                 header: () => (
+                   <AppHeader title=" Terms & Conditions " showBack={true} rightContent="none" />
+                 ),
+               }}
       />
     </Stack>
   );
