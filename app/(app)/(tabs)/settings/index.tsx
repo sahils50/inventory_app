@@ -209,6 +209,31 @@ export default function Setting() {
             />
           </View>
         </TouchableOpacity>
+        <View className="flex-1 items-center justify-center p-6">
+          <TouchableOpacity
+            activeOpacity={0.7}
+            className={`
+          flex-row items-center justify-center 
+          bg-red-600 
+          px-6 py-3.5 
+          rounded-xl 
+          shadow-md shadow-red-700/40
+          active:bg-red-700
+          w-[80%] max-w-[340px]   // ← optional: better mobile sizing
+        `}
+            onPress={() => console.log("Logging out...")}
+          >
+            <Ionicons
+              name="log-out-outline"
+              size={22}
+              color="white"
+              style={{ marginRight: 8 }}
+            />
+            <Text className="text-white font-medium text-base tracking-wide">
+              Logout
+            </Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </View>
   );
