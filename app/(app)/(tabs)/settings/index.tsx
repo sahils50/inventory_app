@@ -1,5 +1,6 @@
 import SettingsItem from "@/components/common/ItemsCard";
 import SettingsToggleItem from "@/components/common/ToggleItemCard";
+import ProfileCard from "@/components/setting/ProfileCard";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
@@ -7,7 +8,12 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 export default function Setting() {
   return (
     <View className="flex-1 bg-white">
-      <ScrollView className="flex-1">
+      <ScrollView className="flex-1" contentContainerStyle={{ paddingTop: 20 }}>
+        <ProfileCard
+          name="Rajesh Kumar"
+          role="Store Owner"
+          onEditPress={() => router.push("/(app)/(tabs)/settings/EditProfile")}
+        />
         <TouchableOpacity
           activeOpacity={0.8}
           className={`
