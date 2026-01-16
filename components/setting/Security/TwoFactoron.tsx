@@ -18,14 +18,15 @@ const TwoFactoron = () => {
       <Text className="text-xl font-semibold mb-2">Verification Code</Text>
 
       <View className="flex flex-row gap-2">
+        <TouchableOpacity>
+          <Text className="border border-gray-500 rounded-md px-2 py-2 mb-4 w-24">
+            Send Code
+          </Text>
+        </TouchableOpacity>
+
         <TextInput
           className="border border-gray-500 rounded-md px-2 py-2 mb-4 w-30"
           placeholder="Enter Code"
-        />
-
-        <TextInput
-          className="border border-gray-500 rounded-md px-2 py-2 mb-4 w-24"
-          placeholder="Send Code"
         />
       </View>
 
