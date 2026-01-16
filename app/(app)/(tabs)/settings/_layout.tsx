@@ -103,6 +103,18 @@ export default function SettingLayout() {
           ),
         }}
       />
+      <Stack.Screen
+        name="ViewProfile"
+        options={{
+          header: () => (
+            <AppHeader
+              title="View Profile"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
+        }}
+      />
     </Stack>
   );
 }
