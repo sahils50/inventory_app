@@ -9,6 +9,10 @@ export default function HomeScreen() {
         title="Open Notifications"
         onPress={() => router.push("/(app)/(tabs)/home/notifications")}
       />
+      <Button
+        title="Open Scan Bill"
+        onPress={() => router.push("/(app)/(tabs)/home/ScanBill")}
+      />
     </View>
   );
 }

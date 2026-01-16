@@ -22,6 +22,18 @@ export default function HomeLayout() {
           ),
         }}
       />
+      <Stack.Screen
+        name="ScanBill"
+        options={{
+          header: () => (
+            <AppHeader
+              title="Scan Bill"
+              showBack={true}
+              rightContent="none"
+            />
+          ),
+        }}
+      />
     </Stack>
   );
 }
