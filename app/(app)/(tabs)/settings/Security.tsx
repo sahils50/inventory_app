@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Modal,
   Pressable,
-  TextInput,
+
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FontAwesome } from "@expo/vector-icons";
@@ -59,7 +59,7 @@ const securityItems: SecurityItem[] = [
 ];
 
 /* ---------- COMPONENT ---------- */
-export default function SecurityCenter(): JSX.Element {
+export default function SecurityCenter(){
   const [is2FAEnabled, setIs2FAEnabled] = useState<boolean>(false);
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
