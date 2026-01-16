@@ -8,7 +8,7 @@ export default function SettingLayout() {
         name="index"
         options={{
           header: () => (
-            <AppHeader title="Security" showBack={true} rightContent="none" />
+            <AppHeader title="Privacy" showBack={true} rightContent="none" />
           ),
         }}
       />
