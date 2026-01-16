@@ -42,9 +42,9 @@ export default function Setting() {
           <View className="pb-10">
             <SettingsItem
               icon="person-outline"
-              title="Edit Profile"
-              description="Update your personal information"
-              onPress={() => router.push("/(app)/(tabs)/settings/EditProfile")}
+              title="View Profile"
+              description="View & Update your personal information"
+              onPress={() => router.push("/(app)/(tabs)/settings/ViewProfile")}
             />
 
             <SettingsItem
