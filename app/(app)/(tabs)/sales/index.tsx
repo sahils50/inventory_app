@@ -1,11 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import type { FC } from "react";
-import {
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View
-} from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 // ────────────────────────────────────────────────
 // Types
@@ -206,107 +201,171 @@ const TopProductItem: FC<TopProductProps> = ({
 
 export default function HomeScreen() {
   return (
-    <ScrollView className="flex-1 px-4 pt-6 pb-10">
-      {/* Header - Week */}
-      <View className="mb-7">
-        <View className="flex-row items-center justify-between">
-          <Text className="text-2xl font-bold text-gray-900">This Week</Text>
-          <TouchableOpacity className="p-2 -mr-2">
-            <Ionicons name="calendar-outline" size={26} color="#6b7280" />
-          </TouchableOpacity>
+    <ScrollView className="flex-1 pt-6 pb-10">
+      <SalesHeader />
+      <View className="px-4">
+        {/* Header - Week */}
+        <View className="mb-7">
+          <View className="flex-row items-center justify-between">
+            <Text className="text-2xl font-bold text-gray-900">This Week</Text>
+            <TouchableOpacity className="p-2 -mr-2">
+              <Ionicons name="calendar-outline" size={26} color="#6b7280" />
+            </TouchableOpacity>
+          </View>
+          <Text className="text-gray-600 mt-1 text-base">
+            7 Dec 2025 - 8 Dec 2025
+          </Text>
         </View>
-        <Text className="text-gray-600 mt-1 text-base">
-          7 Dec 2025 - 8 Dec 2025
-        </Text>
-      </View>
 
-      {/* Statistics Grid */}
-      <View className="flex flex-row flex-wrap justify-between mb-10 px-4">
-        <StatCard
-          icon="cash-outline"
-          bgColor="bg-purple-50"
-          iconColor="#7c3aed"
-          title="Total Revenue"
-          value="₹85,620"
-          change="+12.5%"
-        />
-        <StatCard
-          icon="cart-outline"
-          bgColor="bg-cyan-50"
-          iconColor="#0891b2"
-          title="Total Orders"
-          value="128"
-          change="+8.2%"
-        />
-        <StatCard
-          icon="people-outline"
-          bgColor="bg-pink-50"
-          iconColor="#db2777"
-          title="Customers"
-          value="58"
-          change="+5.3%"
-        />
-        <StatCard
-          icon="trending-up-outline"
-          bgColor="bg-emerald-50"
-          iconColor="#059669"
-          title="Net Profit"
-          value="₹17,500"
-          change="+16.1%"
-        />
-      </View>
-
-      {/* Sales Trend Placeholder */}
-      <View className="mb-10">
-        <SectionHeader title="Sales Trend" action="Daily ▼" />
-        <View className="h-48 bg-white rounded-2xl border border-gray-100 items-center justify-center shadow-sm">
-          <Text className="text-gray-400">Sales trend chart coming soon</Text>
+        {/* Statistics Grid */}
+        <View className="flex flex-row flex-wrap justify-between mb-10 px-4">
+          <StatCard
+            icon="cash-outline"
+            bgColor="bg-purple-50"
+            iconColor="#7c3aed"
+            title="Total Revenue"
+            value="₹85,620"
+            change="+12.5%"
+          />
+          <StatCard
+            icon="cart-outline"
+            bgColor="bg-cyan-50"
+            iconColor="#0891b2"
+            title="Total Orders"
+            value="128"
+            change="+8.2%"
+          />
+          <StatCard
+            icon="people-outline"
+            bgColor="bg-pink-50"
+            iconColor="#db2777"
+            title="Customers"
+            value="58"
+            change="+5.3%"
+          />
+          <StatCard
+            icon="trending-up-outline"
+            bgColor="bg-emerald-50"
+            iconColor="#059669"
+            title="Net Profit"
+            value="₹17,500"
+            change="+16.1%"
+          />
         </View>
+
+        {/* Sales Trend Placeholder */}
+        <View className="mb-10">
+          <SectionHeader title="Sales Trend" action="Daily ▼" />
+          <View className="h-48 bg-white rounded-2xl border border-gray-100 items-center justify-center shadow-sm">
+            <Text className="text-gray-400">Sales trend chart coming soon</Text>
+          </View>
+        </View>
+
+        {/* Recent Sales */}
+        <SectionHeader title="Recent Sales" action="See All" />
+        <CardContainer>
+          <SaleItem name="Ramesh Kumar" time="10:45 AM" amount={1250} />
+          <SaleItem name="Sunita Grocery" time="09:30 AM" amount={3450} />
+          <SaleItem
+            name="Amit Sharma"
+            time="Yesterday • 3 items"
+            amount={850}
+          />
+          <SaleItem
+            name="Priya Patel"
+            time="Yesterday • 8 items"
+            amount={2100}
+            isLast
+          />
+        </CardContainer>
+
+        {/* Top Products */}
+        <SectionHeader title="Top Products" action="This Month ▼" />
+        <CardContainer>
+          <TopProductItem
+            rank={1}
+            name="Maggi Noodles"
+            sold={142}
+            amount={17040}
+          />
+          <TopProductItem
+            rank={2}
+            name="Dairy Milk Chocolate"
+            sold={89}
+            amount={4450}
+          />
+          <TopProductItem
+            rank={3}
+            name="Colgate Toothpaste"
+            sold={67}
+            amount={5025}
+          />
+          <TopProductItem
+            rank={4}
+            name="Nescafe Coffee"
+            sold={45}
+            amount={11250}
+            isLast
+          />
+        </CardContainer>
       </View>
-
-      {/* Recent Sales */}
-      <SectionHeader title="Recent Sales" action="See All" />
-      <CardContainer>
-        <SaleItem name="Ramesh Kumar" time="10:45 AM" amount={1250} />
-        <SaleItem name="Sunita Grocery" time="09:30 AM" amount={3450} />
-        <SaleItem name="Amit Sharma" time="Yesterday • 3 items" amount={850} />
-        <SaleItem
-          name="Priya Patel"
-          time="Yesterday • 8 items"
-          amount={2100}
-          isLast
-        />
-      </CardContainer>
-
-      {/* Top Products */}
-      <SectionHeader title="Top Products" action="This Month ▼" />
-      <CardContainer>
-        <TopProductItem
-          rank={1}
-          name="Maggi Noodles"
-          sold={142}
-          amount={17040}
-        />
-        <TopProductItem
-          rank={2}
-          name="Dairy Milk Chocolate"
-          sold={89}
-          amount={4450}
-        />
-        <TopProductItem
-          rank={3}
-          name="Colgate Toothpaste"
-          sold={67}
-          amount={5025}
-        />
-        <TopProductItem
-          rank={4}
-          name="Nescafe Coffee"
-          sold={45}
-          amount={11250}
-          isLast
-        />
-      </CardContainer>
     </ScrollView>
   );
 }
+const SalesHeader = () => {
+  return (
+    <View className="mb-8">
+      <View
+        className="rounded-b-3xl overflow-hidden"
+        style={{ backgroundColor: "#6b21a8" }} // fallback
+      >
+        <View
+          className="px-5 pt-8 pb-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #4c1d95 100%)",
+          }}
+        >
+          {/* Title + Avatar - smaller */}
+          <View className="flex-row justify-between items-center mb-5">
+            <Text className="text-white text-2xl font-bold">
+              Sales Analytics
+            </Text>
+            <View className="w-9 h-9 bg-white/25 rounded-full items-center justify-center border border-white/30">
+              <Ionicons name="person-outline" size={20} color="white" />
+            </View>
+          </View>
+
+          {/* 3 compact cards in one row */}
+          <View className="flex-row justify-between gap-2.5">
+            {/* Today */}
+            <View className="flex-1 bg-white/18 backdrop-blur-lg rounded-xl p-3.5 border border-white/15">
+              <Text className="text-purple-100 text-xs font-medium mb-0.5">
+                Today
+              </Text>
+              <Text className="text-white text-xl font-extrabold">₹12,450</Text>
+            </View>
+
+            {/* This Week */}
+            <View className="flex-1 bg-white/18 backdrop-blur-lg rounded-xl p-3.5 border border-white/15">
+              <Text className="text-purple-100 text-xs font-medium mb-0.5">
+                This Week
+              </Text>
+              <Text className="text-white text-xl font-extrabold">₹85,620</Text>
+            </View>
+
+            {/* This Month */}
+            <View className="flex-1 bg-white/18 backdrop-blur-lg rounded-xl p-3.5 border border-white/15">
+              <Text className="text-purple-100 text-xs font-medium mb-0.5">
+                This Month
+              </Text>
+              <Text className="text-white text-xl font-extrabold">
+                ₹3,45,820
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
+};
