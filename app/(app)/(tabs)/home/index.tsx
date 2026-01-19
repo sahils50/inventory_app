@@ -5,14 +5,14 @@ export default function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text className="text-4xl font-bold text-black">Home Screen</Text>
-      <Button
+      {/* <Button
         title="Open Notifications"
         onPress={() => router.push("/(app)/(tabs)/home/notifications")}
       />
       <Button
         title="Open Scan Bill"
         onPress={() => router.push("/(app)/(tabs)/home/ScanBill")}
-      />
+      /> */}
     </View>
   );
 }

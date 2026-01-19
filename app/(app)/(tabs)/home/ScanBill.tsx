@@ -1,8 +1,10 @@
 import ApplyDiscount from "@/components/scanbill/ApplyDiscount";
 import Cart from "@/components/scanbill/Cart";
+
 import PaymentMethod from "@/components/scanbill/PaymentMethod";
 import PriceSummary from "@/components/scanbill/PriceSummary";
 import { FontAwesome } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 import {
   ScrollView,
@@ -29,7 +31,7 @@ export default function Notifications() {
         >
           {/* Scan Area */}
           <TouchableOpacity activeOpacity={0.85}>
-            <View className="bg-purple-600 p-4 rounded-xl items-center gap-2">
+            <View className="bg-[#8A63F2] p-4 rounded-xl items-center gap-2">
               <FontAwesome name="qrcode" size={34} color="white" />
               <Text className="text-white text-lg font-semibold">
                 Tap to Scan Barcode
@@ -66,6 +68,24 @@ export default function Notifications() {
 
         {/* Payment Method */}
         <PaymentMethod />
+
+        {/* Action Buttons */}
+        <View className="flex-row gap-4 mt-6">
+          <TouchableOpacity className="flex-1 border border-red-500 py-3 rounded-xl">
+            <Text className="text-red-600 text-center font-semibold text-base">
+              Clear
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => router.push("/(app)/(tabs)/home/GenerateBill")}
+            className="flex-1 bg-[#8A63F2] py-3 rounded-xl"
+          >
+            <Text className="text-white text-center font-semibold text-base">
+              Generate Bill
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
