@@ -47,7 +47,6 @@ inventory_app/
 │ | │ | ├── DeleteAccountData.tsx
 │ | │ | ├── DataRetentionPolicy.tsx
 │ | │
-│ | └── \_layout.tsx
 │ | └── index.tsx
 │ | └── +not-found.tsx
 │ ├─(auth)
