@@ -201,7 +201,7 @@ const TopProductItem: FC<TopProductProps> = ({
 
 export default function HomeScreen() {
   return (
-    <ScrollView className="flex-1 pt-6 pb-10">
+    <ScrollView className="flex-1 pb-10">
       <SalesHeader />
       <View className="px-4">
         {/* Header - Week */}
