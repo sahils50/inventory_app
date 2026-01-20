@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         amethyst: "#8A63F2",
+        amethyst_light: "#B9A2F5",
         violet: "#6A35F2",
         emerald: "#10B981",
         "slate-dark": "#1F2937",
