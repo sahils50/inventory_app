@@ -109,7 +109,7 @@ const SectionHeader: FC<{ title: string; action?: string }> = ({
     {action && (
       <TouchableOpacity className="flex-row items-center">
         {/* TODO: Add a Header as per the figma */}
-        <Text className="text-purple-600 font-medium mr-1">{action}</Text>
+        <Text className="text-amethyst font-medium mr-1">{action}</Text>
         {action.includes("All") && (
           <Ionicons name="chevron-forward" size={18} color="#7c3aed" />
         )}
@@ -319,13 +319,7 @@ const SalesHeader = () => {
         className="rounded-b-3xl overflow-hidden"
         style={{ backgroundColor: "#6b21a8" }} // fallback
       >
-        <View
-          className="px-5 pt-8 pb-10"
-          style={{
-            backgroundImage:
-              "linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #4c1d95 100%)",
-          }}
-        >
+        <View className="px-5 pt-8 pb-10 bg-amethyst">
           {/* Title + Avatar - smaller */}
           <View className="flex-row justify-between items-center mb-5">
             <Text className="text-white text-2xl font-bold">
