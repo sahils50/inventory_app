@@ -1,9 +1,13 @@
-import { Text, View } from "react-native";
+import AnalyticsTabs from "@/components/reports/AnalyticsTabs";
+import ReportsHeader from "@/components/reports/ReportHeader";
+import React from "react";
+import { View } from "react-native";
 
 export default function Home() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text className="text-2xl font-bold text-blue-600">Reports Screen</Text>
+    <View className="flex-1 bg-gray-100">
+      <ReportsHeader />
+      <AnalyticsTabs />
     </View>
   );
 }
