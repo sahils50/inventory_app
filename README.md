@@ -1,1 +1,1 @@
-Inventory_App
+inventory_app
