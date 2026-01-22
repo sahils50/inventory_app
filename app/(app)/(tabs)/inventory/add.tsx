@@ -6,9 +6,11 @@ import {
   TouchableOpacity,
   Modal,
   FlatList,
+  ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 /* CATEGORY LIST (like D-Mart) */
 const CATEGORIES = [
@@ -30,7 +32,8 @@ export default function AddProductScreen() {
   const [showCategoryModal, setShowCategoryModal] = useState(false);
 
   return (
-    <View className="flex-1 bg-white px-5 pt-6">
+    
+    <ScrollView className="flex-1 bg-white px-5 p-6 ">
 
       {/* Header */}
       <Text className="text-lg font-bold text-purple-600 mb-6">
@@ -49,7 +52,7 @@ export default function AddProductScreen() {
         <View className="flex-1">
           <Label text="Supplier (Optional)" />
           <TextInput
-            placeholder="Auto-Generate"
+            placeholder="supplier Name"
             className="border border-gray-300 rounded-xl px-4 py-3"
           />
         </View>
@@ -106,7 +109,7 @@ export default function AddProductScreen() {
       />
 
       {/* Actions */}
-      <View className="flex-row gap-4">
+      <View className="flex-row gap-4 mb-10">
         <TouchableOpacity
           onPress={() => router.back()}
           className="flex-1 border border-purple-600 rounded-xl py-3 flex-row justify-center items-center gap-2"
@@ -158,10 +161,12 @@ export default function AddProductScreen() {
           </View>
         </View>
       </Modal>
-    </View>
+    </ScrollView>
+    
   );
 }
 
 const Label = ({ text }: { text: string }) => (
   <Text className="text-sm text-gray-600 mb-1">{text}</Text>
+   
 );

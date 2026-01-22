@@ -93,7 +93,8 @@ const router = useRouter();
 
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-100">
+    <>
+    
       <FlatList
         data={filteredInventoryData}
         keyExtractor={(item) => item.id}
@@ -268,7 +269,7 @@ const router = useRouter();
   currentStock={updateItem?.stock ?? 0}
 />
 
-
-    </SafeAreaView>
+</>
+    
   );
 }
