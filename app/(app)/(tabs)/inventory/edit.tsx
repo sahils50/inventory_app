@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -7,7 +7,8 @@ export default function EditProductScreen() {
   const params = useLocalSearchParams();
 
   return (
-    <View className="flex-1 bg-white px-5 pt-6">
+    
+    <ScrollView className="flex-1 bg-white px-5 pt-6">
       
       {/* Header */}
       <Text className="text-lg font-bold text-purple-700 mb-6">
@@ -88,7 +89,7 @@ export default function EditProductScreen() {
       />
 
       {/* Actions */}
-      <View className="flex-row gap-4">
+      <View className="flex-row gap-4 mb-10">
         <TouchableOpacity
           onPress={() => router.back()}
           className="flex-1 border border-purple-600 rounded-xl py-3 flex-row justify-center items-center gap-2"
@@ -104,7 +105,7 @@ export default function EditProductScreen() {
           <Text className="text-white font-semibold">Save Product</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
